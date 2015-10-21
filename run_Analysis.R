@@ -49,7 +49,7 @@ names(DataMeanStd) <- gsub("BodyBody", "Body", names(DataMeanStd))
 
 #  independent tidy data set with the average of each variable for each activity and each subject.
 TidyData <- lapply(DataMeanStd,mean,by='SUBJECT ID, ACTIVITY ID')
-write.table(TidyData, file = "Tidy.txt",row.names = FALSE)
+write.table(TidyData, file = "TidyData.txt",row.names = FALSE)
 
 
 
